@@ -5,10 +5,13 @@ const InitManager = require('./core/init')
 
 require('module-alias/register')
 
+const catchError = require('./middlewares/exception')
+
 
 const app = new Koa()
 
 app.use(cors())
+app.use(catchError)
 app.use(koaBodyparser())
 
 InitManager.initCore(app)
