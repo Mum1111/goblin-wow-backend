@@ -3,10 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "_moduleAliases": {
+    "@": ".",
+    "@app": "app",
+    "@core": "core",
+    "@middlewares": "middlewares",
+    "@api": "app/api",
+    "@dao": "app/dao",
+    "@lib": "app/lib",
+    "@models": "app/models",
+    "@service": "app/service",
+    "@validators": "app/validators"
+  },
   "dependencies": {
     "@koa/cors": "^3.3.0",
     "koa": "^2.13.4",
     "koa-router": "^10.1.1",
+    "module-alias": "^2.2.2",
     "nodemon": "^2.0.16",
     "require-directory": "^2.1.1"
   },
