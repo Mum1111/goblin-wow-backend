@@ -1,8 +1,11 @@
+const cors = require('@koa/cors')
 const Koa = require('koa')
 const InitManager = require('./core/init')
 
 
 const app = new Koa()
+
+app.use(cors)
 
 InitManager.initCore(app)
 
